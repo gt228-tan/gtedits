@@ -1,6 +1,28 @@
+/* #### Helvetica Font Family (@font-face) #### */
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Helvetica'),
+       url('../fonts/Helvetica.woff') format('woff'),
+       url('../fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Helvetica Bold'),
+       url('../fonts/Helvetica-Bold.woff') format('woff'),
+       url('../fonts/Helvetica-Bold.ttf') format('truetype');
+}
+
 body[data-page="Graphics"] {
   background: #0a0a0a;
   color: #fff;
+  font-family: 'Helvetica', Arial, sans-serif !important;
 }
 
 .gfx-filter-nav {
@@ -45,7 +67,7 @@ body[data-page="Graphics"] {
 }
 
 .gfx-section-title {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   color: #f5e288;
   letter-spacing: 0.02em;

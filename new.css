@@ -1,3 +1,74 @@
+/* #### Helvetica Font Family (@font-face) #### */
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Helvetica'),
+       url('fonts/Helvetica.woff') format('woff'),
+       url('fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Helvetica Bold'),
+       url('fonts/Helvetica-Bold.woff') format('woff'),
+       url('fonts/Helvetica-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Helvetica Oblique'),
+       url('fonts/Helvetica-Oblique.woff') format('woff'),
+       url('fonts/Helvetica-Oblique.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Helvetica Bold Oblique'),
+       url('fonts/Helvetica-BoldOblique.woff') format('woff'),
+       url('fonts/Helvetica-BoldOblique.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Helvetica Light'),
+       url('fonts/Helvetica-Light.woff') format('woff'),
+       url('fonts/Helvetica-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica Compressed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Helvetica Compressed'),
+       url('fonts/Helvetica-Compressed.woff') format('woff'),
+       url('fonts/helvetica-compressed-5871d14b6903a.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Helvetica Rounded Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Helvetica Rounded Bold'),
+       url('fonts/Helvetica-RoundedBold.woff') format('woff'),
+       url('fonts/helvetica-rounded-bold-5871d05ead8de.otf') format('opentype');
+}
+
 :root {
   --blue: #2020ff;
   --blue-dark: #1414cc;
@@ -54,7 +125,7 @@ html {
 }
 
 body {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   background: var(--bg);
   color: var(--color-text);
   overflow-x: hidden;
@@ -78,7 +149,7 @@ body {
 }
 
 .gt-logo {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-size: 1.4rem;
   letter-spacing: 1px;
   color: var(--logo-color);
@@ -98,7 +169,7 @@ body {
 }
 
 .gt-nav {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-size: 18px;
   color: #ffffff;
   text-decoration: none;
@@ -230,7 +301,7 @@ body {
 }
 
 .hero-editor {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-size: clamp(5rem, 18vw, 16rem);
   color: #FEC107;
   letter-spacing: -0.02em;
@@ -287,7 +358,7 @@ body {
   align-items: center;
   background: #FEC107;
   color: #003152;
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-weight: 800;
   font-size: 0.75rem;
   letter-spacing: 0.12em;
@@ -412,7 +483,7 @@ body {
 }
 
 .stat-num {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
   color: #000000;
   display: block;
@@ -600,7 +671,7 @@ body {
 }
 
 .gt-footer-logo {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-size: 1.1rem;
   letter-spacing: 1px;
   text-decoration: none;

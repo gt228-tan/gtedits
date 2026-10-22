@@ -1,7 +1,29 @@
+/* #### Helvetica Font Family (@font-face) #### */
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Helvetica'),
+       url('../fonts/Helvetica.woff') format('woff'),
+       url('../fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Helvetica Bold'),
+       url('../fonts/Helvetica-Bold.woff') format('woff'),
+       url('../fonts/Helvetica-Bold.ttf') format('truetype');
+}
+
 body[data-page="Assets"] {
     background: #0a0a0a;
     color: #fff;
     min-height: 100vh;
+    font-family: 'Helvetica', Arial, sans-serif !important;
 }
 
 .assets-main {
@@ -13,7 +35,7 @@ body[data-page="Assets"] {
 }
 
 .assets-title {
-    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Helvetica', Arial, sans-serif;
     font-size: clamp(2rem, 5vw, 3.2rem);
     color: #FEC107;
     letter-spacing: 0.02em;
@@ -162,7 +184,7 @@ body[data-page="Assets"] {
 }
 
 .asset-detail-title {
-    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Helvetica', Arial, sans-serif;
     font-size: clamp(2rem, 5vw, 3rem);
     color: #fff;
     letter-spacing: 0.02em;

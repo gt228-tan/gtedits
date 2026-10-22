@@ -1,7 +1,49 @@
+/* #### Helvetica Font Family (@font-face) #### */
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Helvetica'),
+       url('../fonts/Helvetica.woff') format('woff'),
+       url('../fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Helvetica Bold'),
+       url('../fonts/Helvetica-Bold.woff') format('woff'),
+       url('../fonts/Helvetica-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Helvetica Oblique'),
+       url('../fonts/Helvetica-Oblique.woff') format('woff'),
+       url('../fonts/Helvetica-Oblique.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Helvetica Bold Oblique'),
+       url('../fonts/Helvetica-BoldOblique.woff') format('woff'),
+       url('../fonts/Helvetica-BoldOblique.ttf') format('truetype');
+}
+
 body[data-page="Clients"] {
     background: #0a0a0a;
     color: #fff;
     min-height: 100vh;
+    font-family: 'Helvetica', Arial, sans-serif !important;
 }
 
 /* ── Page Header ── */
@@ -14,7 +56,7 @@ body[data-page="Clients"] {
 }
 
 .clients-page-heading {
-    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Helvetica', Arial, sans-serif;
     font-size: clamp(2rem, 6vw, 3.5rem);
     color: #FEC107;
     padding: 20px 0 20px;
@@ -63,6 +105,7 @@ body[data-page="Clients"] {
 }
 
 .client-card {
+    font-family: 'Helvetica', Arial, sans-serif !important;
     background: #141414;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
@@ -119,7 +162,7 @@ body[data-page="Clients"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Helvetica', Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     color: #FEC107;
@@ -135,6 +178,7 @@ body[data-page="Clients"] {
 }
 
 .client-card-name {
+    font-family: 'Helvetica', Arial, sans-serif !important;
     font-size: 1.05rem;
     font-weight: 700;
     color: #ffffff;
@@ -146,6 +190,7 @@ body[data-page="Clients"] {
 }
 
 .client-card-subs {
+    font-family: 'Helvetica', Arial, sans-serif !important;
     font-size: 0.8rem;
     color: #ff4d4d;
     font-weight: 600;
@@ -158,6 +203,10 @@ body[data-page="Clients"] {
     border: 1px solid rgba(255, 77, 77, 0.22);
     padding: 4px 12px;
     border-radius: 20px;
+}
+
+.client-card-subs span {
+    font-family: 'Helvetica', Arial, sans-serif !important;
 }
 
 .client-card-subs.client-card-subs-ig {
