@@ -1154,6 +1154,291 @@ a {
   text-align: center;
 }
 
+/* ── HOME TESTIMONIALS & FEATURED CLIENTS SECTION ── */
+.testimonials-preview {
+  padding: 85px 32px;
+  background: var(--light-bg, #f6f7fb);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.testimonials-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.testimonials-block {
+  margin-bottom: 64px;
+}
+
+.testimonials-block:last-child {
+  margin-bottom: 0;
+}
+
+.testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.testimonials-heading-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.testimonials-tag {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+}
+
+.testimonials-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4.2vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.testimonials-title::before {
+  content: '✦';
+  color: var(--blue-primary);
+  font-size: 0.7em;
+}
+
+.btn-pill-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.btn-pill-outline:hover {
+  background: var(--neon-lime);
+  border-color: var(--neon-lime);
+  color: var(--text-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(204, 255, 0, 0.4);
+}
+
+.btn-pill-outline svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.btn-pill-outline:hover svg {
+  transform: translateX(3px);
+}
+
+/* Home Reviews Grid */
+.home-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.home-review-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 32px 28px 26px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-review-card:hover {
+  border-color: var(--blue-primary);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(27, 62, 255, 0.15);
+}
+
+.home-review-stars {
+  display: flex;
+  gap: 4px;
+  color: #ffb703;
+  margin-bottom: 16px;
+}
+
+.home-review-stars svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.home-review-quote {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #3b4256;
+  flex-grow: 1;
+  margin-bottom: 22px;
+}
+
+.home-review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.home-review-avatar-fallback {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: var(--blue-primary);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.home-review-author-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.home-review-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--text-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.home-review-handle {
+  font-size: 0.78rem;
+  color: var(--blue-primary);
+  font-weight: 700;
+}
+
+/* Home Clients Grid */
+.home-clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.home-client-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-client-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue-primary);
+  box-shadow: 0 16px 36px rgba(27, 62, 255, 0.16);
+}
+
+.home-client-avatar-wrapper {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--blue-primary), var(--neon-lime));
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.home-client-card:hover .home-client-avatar-wrapper {
+  transform: scale(1.06);
+}
+
+.home-client-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #f0f2f8;
+  display: block;
+}
+
+.home-client-name {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.home-client-subs {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0f2fa;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  transition: all 0.2s ease;
+}
+
+.home-client-subs svg {
+  flex-shrink: 0;
+}
+
+.home-client-card:hover .home-client-subs {
+  background: var(--neon-lime);
+  border-color: var(--neon-lime);
+  color: var(--text-dark);
+}
+
+@media (max-width: 900px) {
+  .home-reviews-grid,
+  .home-clients-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
 /* ── CONTACT CTA (High-impact Electric Blue & Neon Button) ── */
 .contact-cta {
   background: var(--blue-primary);
