@@ -1,104 +1,118 @@
-/* #### Helvetica Font Family (@font-face) #### */
-@font-face {
-  font-family: 'Helvetica';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Helvetica'),
-       url('../fonts/Helvetica.woff') format('woff'),
-       url('../fonts/Helvetica.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Helvetica';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Helvetica Bold'),
-       url('../fonts/Helvetica-Bold.woff') format('woff'),
-       url('../fonts/Helvetica-Bold.ttf') format('truetype');
-}
-
+/* ── TUTORIALS PAGE STYLES (Light Modern Agency Aesthetic matching Home Page) ── */
 body[data-page="Tutorials"] {
-    background: #0a0a0a;
-    color: #fff;
-    min-height: 100vh;
-    font-family: 'Helvetica', Arial, sans-serif !important;
+  background: var(--light-bg, #f6f7fb);
+  color: var(--text-dark, #090a10);
+  min-height: 100vh;
+  font-family: var(--font-body, 'Plus Jakarta Sans', 'Helvetica', Arial, sans-serif) !important;
 }
 
 .tutorials-main {
-    padding-top: 44px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 .tutorials-header {
-    padding: 48px 32px 8px;
+  padding: 48px 32px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .tutorials-title {
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    color: #FEC107;;
-    letter-spacing: 0.02em;
-    margin-bottom: 10px;
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--text-dark, #090a10);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tutorials-title::before {
+  content: '✦';
+  color: var(--blue-primary, #1b3eff);
+  font-size: 1.8rem;
 }
 
 .tutorials-subscribe-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #090a10;
+  background: var(--neon-lime, #ccff00);
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(204, 255, 0, 0.4);
+  transition: all 0.25s ease;
 }
 
 .tutorials-subscribe-link:hover {
-    color: #ffeeba;
+  background: #b8e600;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(204, 255, 0, 0.6);
 }
 
 .tutorials-subscribe-link svg {
-    width: 14px;
-    height: 14px;
+  width: 14px;
+  height: 14px;
 }
 
 .tutorials-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 28px 32px 64px;
-    justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 32px 32px 64px;
+  justify-content: flex-start;
 }
 
 .tutorial-card {
-    width: 200px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #1a1a1a;
+  width: 220px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue-primary, #1b3eff);
+  box-shadow: 0 16px 36px rgba(27, 62, 255, 0.16);
 }
 
 .tutorial-card iframe {
-    width: 100%;
-    height: 350px;
-    display: block;
-    border: none;
+  width: 100%;
+  height: 380px;
+  display: block;
+  border: none;
 }
 
 @media (max-width: 600px) {
-    .tutorials-header {
-        padding: 32px 16px 8px;
-    }
+  .tutorials-header {
+    padding: 32px 16px 8px;
+  }
 
-    .tutorials-grid {
-        padding: 20px 16px 48px;
-        justify-content: center;
-    }
+  .tutorials-grid {
+    padding: 20px 16px 48px;
+    justify-content: center;
+  }
 
-    .tutorial-card {
-        width: 100%;
-        max-width: 340px;
-    }
+  .tutorial-card {
+    width: 100%;
+    max-width: 340px;
+  }
 }

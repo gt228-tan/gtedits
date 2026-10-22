@@ -1,247 +1,229 @@
-/* #### Helvetica Font Family (@font-face) #### */
-@font-face {
-  font-family: 'Helvetica';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Helvetica'),
-       url('../fonts/Helvetica.woff') format('woff'),
-       url('../fonts/Helvetica.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Helvetica';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Helvetica Bold'),
-       url('../fonts/Helvetica-Bold.woff') format('woff'),
-       url('../fonts/Helvetica-Bold.ttf') format('truetype');
-}
-
+/* ── ASSETS PAGE STYLES (Light Modern Agency Aesthetic matching Home Page) ── */
 body[data-page="Assets"] {
-    background: #0a0a0a;
-    color: #fff;
-    min-height: 100vh;
-    font-family: 'Helvetica', Arial, sans-serif !important;
+  background: var(--light-bg, #f6f7fb);
+  color: var(--text-dark, #090a10);
+  min-height: 100vh;
+  font-family: var(--font-body, 'Plus Jakarta Sans', 'Helvetica', Arial, sans-serif) !important;
 }
 
 .assets-main {
-    padding-top: 44px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .assets-header {
-    padding: 48px 32px 12px;
+  padding: 48px 32px 16px;
 }
 
 .assets-title {
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    color: #FEC107;
-    letter-spacing: 0.02em;
-    margin-bottom: 4px;
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--text-dark, #090a10);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.assets-title::before {
+  content: '✦';
+  color: var(--blue-primary, #1b3eff);
+  font-size: 1.8rem;
 }
 
 .assets-list {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 32px 24px 64px;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .asset-item {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    padding: 28px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 24px 28px;
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.asset-item:last-child {
-    border-bottom: none;
+.asset-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue-primary, #1b3eff);
+  box-shadow: 0 16px 36px rgba(27, 62, 255, 0.16);
 }
 
 .asset-item:hover .asset-item-name {
-    color: #ffeeba;
+  color: var(--blue-primary, #1b3eff);
 }
 
 .asset-item img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    flex-shrink: 0;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.04);
-    padding: 8px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #f4f6fc;
+  padding: 8px;
 }
 
 .asset-item-info {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .asset-item-name {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 6px;
-    transition: color 0.2s;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-dark, #090a10);
+  margin-bottom: 6px;
+  transition: color 0.2s ease;
 }
 
 .asset-item-desc {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted, #5e647c);
 }
 
 .assets-suggest-btn {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 48px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 56px;
 }
 
 .assets-suggest-btn a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    color: #fff;
-    border: 1.5px solid rgba(255, 255, 255, 0.25);
-    font-weight: 700;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 14px 36px;
-    border-radius: 100px;
-    text-decoration: none;
-    transition: border-color 0.2s, background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--neon-lime, #ccff00);
+  color: #090a10;
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-weight: 900;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 15px 38px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(204, 255, 0, 0.4);
+  transition: all 0.25s ease;
 }
 
 .assets-suggest-btn a:hover {
-    border-color: #ffffff;
-    color: #ffeeba;
+  background: #b8e600;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(204, 255, 0, 0.6);
 }
 
 @media (max-width: 600px) {
-    .assets-header {
-        padding: 32px 16px 8px;
-    }
+  .assets-header {
+    padding: 32px 16px 8px;
+  }
 
-    .assets-list {
-        padding: 24px 16px 48px;
-    }
+  .assets-list {
+    padding: 24px 16px 48px;
+  }
 
-    .asset-item {
-        gap: 16px;
-    }
+  .asset-item {
+    gap: 16px;
+    padding: 18px 16px;
+  }
 
-    .asset-item img {
-        width: 60px;
-        height: 60px;
-    }
+  .asset-item img {
+    width: 60px;
+    height: 60px;
+  }
 }
 
-/* ── Asset Detail Subpages (AnimeGIF, Brushes, etc.) ── */
-
+/* Detail subpages */
 .asset-detail-main {
-    padding-top: 44px;
-    min-height: 70vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  min-height: 70vh;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .asset-detail-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin: 24px 32px 0;
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 32px 0;
+  color: var(--blue-primary, #1b3eff);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.2s;
 }
 
 .asset-detail-back:hover {
-    color: #ffeeba;
-}
-
-.asset-detail-back svg {
-    width: 14px;
-    height: 14px;
+  transform: translateX(-4px);
 }
 
 .asset-detail-content {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 32px 32px 64px;
+  padding: 32px;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .asset-detail-title {
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-size: clamp(2rem, 5vw, 3rem);
-    color: #fff;
-    letter-spacing: 0.02em;
-    margin-bottom: 16px;
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  color: var(--text-dark, #090a10);
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .asset-detail-desc {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.65);
-    margin-bottom: 28px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-muted, #5e647c);
+  margin-bottom: 28px;
 }
 
 .asset-detail-preview {
-    display: block;
-    width: 100%;
-    border-radius: 14px;
-    margin-bottom: 28px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
-}
-
-.asset-detail-preview:hover {
-    transform: scale(1.025);
-    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.7);
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid rgba(0, 0, 0, 0.07);
+  margin-bottom: 32px;
 }
 
 .asset-detail-download {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #FEC107;
-    color: #003152;
-    font-weight: 800;
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 14px 40px;
-    border-radius: 100px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+  background: var(--neon-lime, #ccff00);
+  color: #090a10;
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(204, 255, 0, 0.4);
+  transition: all 0.25s ease;
 }
 
 .asset-detail-download:hover {
-    background: #003152;
-    color: #ffffff;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 600px) {
-    .asset-detail-back {
-        margin: 16px 16px 0;
-    }
-
-    .asset-detail-content {
-        padding: 24px 16px 48px;
-    }
+  background: #b8e600;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(204, 255, 0, 0.6);
 }

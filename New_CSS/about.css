@@ -1,166 +1,174 @@
-/* #### Helvetica Font Family (@font-face) #### */
-@font-face {
-  font-family: 'Helvetica';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Helvetica'),
-       url('../fonts/Helvetica.woff') format('woff'),
-       url('../fonts/Helvetica.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Helvetica';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Helvetica Bold'),
-       url('../fonts/Helvetica-Bold.woff') format('woff'),
-       url('../fonts/Helvetica-Bold.ttf') format('truetype');
-}
-
+/* ── ABOUT PAGE STYLES (Light Modern Agency Aesthetic matching Home Page) ── */
 body[data-page="About"] {
-    background: #0a0a0a;
-    color: #fff;
-    min-height: 100vh;
-    font-family: 'Helvetica', Arial, sans-serif !important;
+  background: var(--light-bg, #f6f7fb);
+  color: var(--text-dark, #090a10);
+  min-height: 100vh;
+  font-family: var(--font-body, 'Plus Jakarta Sans', 'Helvetica', Arial, sans-serif) !important;
 }
 
 .about-main {
-    padding-top: 44px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .about-section {
-    padding: 64px 32px;
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
+  padding: 64px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about-name {
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    color: #FEC107;
-    margin-bottom: 16px;
-    letter-spacing: 0.02em;
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--text-dark, #090a10);
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-name::before {
+  content: '✦';
+  color: var(--blue-primary, #1b3eff);
 }
 
 .about-bio {
-    font-size: clamp(0.95rem, 2vw, 1.2rem);
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 700px;
-    margin: 0 auto 48px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.75;
+  color: #4b5267;
+  max-width: 760px;
+  margin: 0 auto 52px;
 }
 
 .about-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 48px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
 }
 
 /* Slideshow */
 .about-slideshow {
-    position: relative;
-    width: 100%;
-    max-width: 520px;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    flex-shrink: 0;
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  flex-shrink: 0;
 }
 
 .about-slides {
-    display: flex;
-    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-slides img {
-    width: 100%;
-    flex-shrink: 0;
-    display: block;
-    object-fit: cover;
+  width: 100%;
+  flex-shrink: 0;
+  display: block;
+  object-fit: cover;
 }
 
 .about-slide-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.55);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-    backdrop-filter: blur(4px);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #090a10;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .about-slide-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
+  background: var(--neon-lime, #ccff00);
+  color: #090a10;
+  border-color: var(--neon-lime, #ccff00);
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 18px rgba(204, 255, 0, 0.45);
 }
 
 .about-slide-btn--prev {
-    left: 10px;
+  left: 14px;
 }
 
 .about-slide-btn--next {
-    right: 10px;
+  right: 14px;
 }
 
 /* Stats */
 .about-stats {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
 }
 
 .about-stat {
-    padding: 20px 28px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    min-width: 120px;
+  padding: 24px 32px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1.5px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  min-width: 140px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-stat:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue-primary, #1b3eff);
+  box-shadow: 0 16px 36px rgba(27, 62, 255, 0.15);
 }
 
 .about-stat-num {
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    color: #FEC107;
-    display: block;
-    line-height: 1;
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-weight: 900;
+  color: var(--blue-primary, #1b3eff);
+  display: block;
+  line-height: 1;
 }
 
 .about-stat-label {
-    display: block;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 8px;
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted, #5e647c);
+  margin-top: 10px;
 }
 
 @media (max-width: 700px) {
-    .about-section {
-        padding: 48px 16px;
-    }
+  .about-section {
+    padding: 48px 16px;
+  }
 
-    .about-content {
-        flex-direction: column;
-    }
+  .about-content {
+    flex-direction: column;
+  }
 
-    .about-slideshow {
-        max-width: 100%;
-    }
+  .about-slideshow {
+    max-width: 100%;
+  }
 }
